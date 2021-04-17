@@ -37,11 +37,11 @@ int nThreads;
 			catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-		//	pulosTotal += threads[i].TerminadoPulos();
-		//	distanciaTotal += threads[i].TerminadoDistancia();
+			pulosTotal += threads[i].TerminadoPulos();
+			distanciaTotal += threads[i].TerminadoDistancia();
 		}
 		
-		//System.out.println("o time " + time + " total de pulos: " + pulosTotal + " percorreu: " + distanciaTotal + "cm");
+		System.out.println("o time " + time + " total de pulos: " + pulosTotal + " percorreu: " + distanciaTotal + "cm");
 	}
 	
 	public int RetornaPulosTotais()

@@ -35,14 +35,14 @@ public class Main {
 		
 		threads= new ThreadTimes[times];
 		
-		for (int i = 0; i < nThreads; i++) {
+		for (int i = 0; i < times; i++) {
 			int start = i * elemThread;
 			int end = start + elemThread;
 			threads[i] = new ThreadTimes(i, 3, distancia, tamanhoMaximoPulo, elemThread, times);
 			threads[i].start();
 		}
 		
-			for (int i = 0; i < nThreads; i++) {
+			for (int i = 0; i < times; i++) {
 				try {
 					threads[i].join();
 				}
@@ -55,7 +55,7 @@ public class Main {
 			
 			System.out.println("----------");
 			
-			for (int i = 0; i < nThreads; i++) {
+			for (int i = 0; i < times; i++) {
 				System.out.println("O time " + i + " Total de pulos: " + threads[i].RetornaPulosTotais() + (" Percorrou: ") + threads[i].RetornaDistanciaPercorrida() + " centímetros");
 			}
 			
