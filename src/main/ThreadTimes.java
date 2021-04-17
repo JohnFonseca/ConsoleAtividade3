@@ -20,7 +20,7 @@ int nThreads;
 			int end = start + elemThread;
 			int tempTime;//novo
 		//	tempTime= rand.nextInt(times+1);//novo
-			threads[i] = new ThreadProcessor("O Grilo_"+(i+1+(time*3)+ " do time" + time),0,distancia,tamanhoMaximoPulo,start,end,time);
+		//	threads[i] = new ThreadProcessor("O Grilo_"+(i+1+(time*3)+ " do time" + time),0,distancia,tamanhoMaximoPulo,start,end,time);
 			threads[i].start();
 		}
 	}
