@@ -7,8 +7,8 @@ public class Main {
 
 	
 	public static void main(String args[]) {
-		int grilosmin = 2;
-		int grilosMax = 10;
+		int grilosmin = 6;
+		int grilosMax = 20;
 		Random rand = new Random();
 		int grilosNaPartida = rand.nextInt(grilosMax + 1);
 		if(grilosNaPartida<grilosmin)
@@ -59,7 +59,7 @@ public class Main {
 				System.out.println("O time " + i + " Total de pulos: " + threads[i].RetornaPulosTotais() + (" Percorrou: ") + threads[i].RetornaDistanciaPercorrida() + " centímetros");
 			}
 			
-			//System.out.println("O time " + )
+			System.out.println("o time "+ Colocacoes.getInstance().Vencedor() + " venceu!");
 	}
 	
 }

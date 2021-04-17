@@ -9,7 +9,8 @@ public class ThreadProcessor extends Thread {
 	int start, end;
 	boolean vencedor;
 	int tamanhoMaximoPulo;
-	public ThreadProcessor(String nome,int tamanhoPulo,int distanciaMaxima,int tamanhoMaximoPulo,int start, int end) {
+	int times;
+	public ThreadProcessor(String nome,int tamanhoPulo,int distanciaMaxima,int tamanhoMaximoPulo,int start, int end, int times) {
 		this.nome = nome;
 		this.distanciaMaxima = distanciaMaxima;
 		this.tamanhoPulo = tamanhoPulo;
@@ -17,8 +18,18 @@ public class ThreadProcessor extends Thread {
 		this.start = start;
 		this.end = end;
 		this.tamanhoMaximoPulo = tamanhoMaximoPulo;
+		this.times = times;
 		vencedor = false;
 	}
+	
+	public int TerminadoPulos()
+    {
+        return pulos;
+    }
+    public int TerminadoDistancia()
+    {
+        return distancia;
+    }
 	
 	public void run() {
 while(vencedor==false)
@@ -44,8 +55,16 @@ while(vencedor==false)
 		
 		System.out.println(nome + " percorreu "+distanciaMaxima + " e alcançou a linha de chegada "+" com " +pulos + " pulos");
 		vencedor = true;
+		Colocacoes.getInstance().AdicionarPosicoes(nome, times);
 		
 	}
+	
+	try {
+        Thread.sleep((int)(Math.random() * 500));
+    } catch (InterruptedException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
 	
 	//System.out.println("fim");
 }
