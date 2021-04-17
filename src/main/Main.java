@@ -24,7 +24,7 @@ public class Main {
 		int elemThread = grilosNaPartida / nThreads;
 		
 		//System.out.println(grilosNaPartida);
-		ThreadProcessor threads[];// = new ThreadProcessor[grilosNaPartida];
+		ThreadTimes threads[];// = new ThreadProcessor[grilosNaPartida];
 		
 		int times;
 		times = grilosNaPartida/3;
