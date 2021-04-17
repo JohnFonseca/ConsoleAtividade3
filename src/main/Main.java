@@ -56,8 +56,10 @@ public class Main {
 			System.out.println("----------");
 			
 			for (int i = 0; i < nThreads; i++) {
-				//System.out.println("O time " + i + " Total de pulos: " + threads[i].RetornaPulosTotais);
+				System.out.println("O time " + i + " Total de pulos: " + threads[i].RetornaPulosTotais() + (" Percorrou: ") + threads[i].RetornaDistanciaPercorrida() + " centímetros");
 			}
+			
+			//System.out.println("O time " + )
 	}
 	
 }
